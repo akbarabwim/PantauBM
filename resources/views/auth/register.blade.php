@@ -24,7 +24,45 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="nim" class="col-md-4 col-form-label text-md-right">{{ __('NIM') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="nim" type="text" class="form-control{{ $errors->has('nim') ? ' is-invalid' : '' }}" name="nim" value="{{ old('nim') }}" required autofocus>
+
+                                @if ($errors->has('nim'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('nim') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="departemen" class="col-md-4 col-form-label text-md-right">{{ __('Departemen') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="departemen" type="text" class="form-control{{ $errors->has('departemen') ? ' is-invalid' : '' }}" name="departemen" value="{{ old('departemen') }}" required autofocus>
+
+                                @if ($errors->has('departemen'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('departemen') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="fakultas" class="col-md-4 col-form-label text-md-right">{{ __('fakultas') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="fakultas" type="text" class="form-control{{ $errors->has('fakultas') ? ' is-invalid' : '' }}" name="fakultas" value="{{ old('fakultas') }}" required autofocus>
+
+                                @if ($errors->has('fakultas'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('fakultas') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 

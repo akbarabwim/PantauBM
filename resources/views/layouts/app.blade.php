@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'PantauBM') }}</title>
+    <title>PantauBM</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -17,7 +17,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,19 +30,17 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
 
-    <!-- Fonts -->
-    <!--<link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
-    <! Styles -->
-  <!--  <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 </head>
 <body id="page-top">
     <div id="app">
         <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
             <div class="container">
-                <a class="navbar-brand mr-1" href="{{ url('/home') }}">
-                    {{ config('app.name', 'PantauBM') }}
+                <a class="navbar-brand mr-1" href="{{ url('/home') }}">PantauBM
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -94,30 +91,29 @@
         <!-- Sidebar -->
         <ul class="sidebar navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href={{ url('/home') }}>
               <span>Beranda</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href=#>
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url('/pengeluaran/create') }}>
               <span>Input Pengeluaran</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href=#>
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url('/pemasukan') }}>
               <span>Input Pemasukan</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href=#>
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url('/rekap') }}>
               <span>Rekapitulasi</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href=#>
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url('/help') }}>
               <span>Bantuan</span></a>
           </li>
         </ul>
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @yield('content')
+
     </div>
 </body>
 </html>

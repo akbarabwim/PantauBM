@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('pengeluaran', 'pengeluaranController');
+Route::get('/pemasukan', 'pemasukanController@index')->name('pemasukan');
+Route::get('/rekap', 'rekapController@index')->name('rekap');
+Route::get('/help', 'helpController@index')->name('help');
